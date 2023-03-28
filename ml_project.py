@@ -20,9 +20,6 @@ from streamlit_pandas_profiling import st_profile_report
 
 
 
-
-
-
 data_url = "http://lib.stat.cmu.edu/datasets/boston" 
 
 
@@ -200,7 +197,7 @@ if app_mode == 'Introduction':
 
 if app_mode == 'Visualization':
     st.markdown("## Visualization")
-    symbols = st.multiselect("Select two variables",list_variables, )
+    symbols = st.multiselect("Select two variables",list_variables,["quality","citric acid"] )
     width1 = st.sidebar.slider("plot width", 1, 25, 10)
     #symbols = st.multiselect("", list_variables, list_variables[:5])
     tab1, tab2= st.tabs(["Line Chart","📈 Correlation"])    
